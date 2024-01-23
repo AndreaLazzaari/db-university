@@ -20,7 +20,7 @@ GROUP BY `office_address`;
 
 SELECT AVG(`vote`) AS media_voti 
 FROM `exam_student` 
-WHERE `vote`; 
+GROUP BY `vote`; 
 
 
 
@@ -57,7 +57,7 @@ WHERE `cfu`> 10;
 3.
 SELECT * 
 FROM `students` 
-WHERE `date_of_birth` BETWEEN '1994-01-01' AND '1994-12-31'; 
+WHERE `date_of_birth` BETWEEN '1994-01-01' AND '1800-12-31'; 
 
 
 4.
@@ -69,9 +69,9 @@ WHERE `period` = 'I semestre' AND `year` = 1;
 5.
 SELECT `date`, `hour`
 FROM `exams`
-WHERE `date` = '2020-06/20' AND `hour` = '14:00';
+WHERE `date` = '2020-06-20' AND `hour` = '14:00';
 
-SBAGLIATOOOOOOO
+
 
 6.
 SELECT `name`, `level` 
@@ -87,4 +87,4 @@ FROM `departments`
 8.
 SELECT `surname`, `phone` 
 FROM `teachers` 
-WHERE `phone` IS NULL; 
+WHERE `phone` IS NOT NULL; 
